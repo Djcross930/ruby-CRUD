@@ -17,3 +17,6 @@ Content-Type: application/json
 {
   "name": "fredo"
 }
+
+###
+Delete http://localhost:3000/dogs/3
