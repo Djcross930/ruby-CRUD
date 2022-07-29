@@ -20,4 +20,13 @@ class DogsController < ApplicationController
     render json: dog.as_json
   end
 
+  def update
+    dog = Dog.find_by(id: params[:id])
+    dog.name = params[:name] || dog.name
+    dog.breed = params[:breed] || dog.breed
+    dog.age = params[:age] || dog.age
+    dog.save
+    render json: dog.as_json
+  end
+
 end
